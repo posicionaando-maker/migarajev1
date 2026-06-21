@@ -137,6 +137,7 @@ body {
     will-change: transform;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    aspect-ratio: 1 / 1;
 }
 
 .card:hover {
