@@ -1,0 +1,40 @@
+{
+  "name": "Garaje en Línea - Catálogo",
+  "short_name": "GarajeLínea",
+  "description": "Catálogo de venta de garaje: máquinas de escribir, libros antiguos, ropa, calzado, macetas y útiles de cocina.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#2d2d2d",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Catálogo",
+      "short_name": "Catálogo",
+      "description": "Ver todos los productos",
+      "url": "/#home",
+      "icons": [{ "src": "img/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Mis Reservas",
+      "short_name": "Reservas",
+      "description": "Ver productos reservados",
+      "url": "/#reservas",
+      "icons": [{ "src": "img/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
