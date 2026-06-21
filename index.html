@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Garaje en Línea - Catálogo</title>
+    <meta name="description" content="Catálogo de venta de garaje: máquinas de escribir, libros antiguos, ropa, calzado, macetas y útiles de cocina.">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Apple Touch Icon para iOS -->
+    <link rel="apple-touch-icon" href="img/icon-192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Color de la barra de navegación en Android -->
+    <meta name="theme-color" content="#2d2d2d">
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header id="header">
+        <div class="container">
+            <h1>🏚️ Garaje en Línea</h1>
+            <nav id="main-nav">
+                <button class="nav-btn active" data-view="home">🏠 Inicio</button>
+                <button class="nav-btn" data-view="carrito">🛒 Reservas</button>
+                <button class="nav-btn" data-view="categorias">📂 Categorías</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal - se renderiza con JS -->
+    <main id="app">
+        <div class="container" id="content">
+            <!-- El contenido se carga dinámicamente -->
+            <div class="loading">Cargando catálogo...</div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <p>📞 Contacto: <a href="tel:+5355555555">+53 5 555 5555</a></p>
+            <p>📍 Recogida en: <span id="direccion">Tu dirección aquí</span></p>
+            <p class="small">© 2026 Garaje en Línea - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Librería QRCode.js -->
+    <script src="js/qrcode.min.js"></script>
+    <!-- App principal -->
+    <script src="js/app.js"></script>
+    
+    <script>
+        // Registrar Service Worker
+        if ('navigator' in window && 'serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('✅ Service Worker registrado'))
+                .catch(err => console.log('❌ Error SW:', err));
+        }
+    </script>
+</body>
+</html>
