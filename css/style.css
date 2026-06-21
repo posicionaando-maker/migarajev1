@@ -129,7 +129,15 @@ body {
 
 .card .info {
     padding: 12px;
+    /* Añade esta línea para darle una altura mínima fija */
+    min-height: 180px; 
+    /* O un valor que se adapte a tu diseño */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Esto empuja el precio hacia abajo */;
 }
+    
+
 
 .card h3 {
     font-size: 0.95rem;
@@ -139,7 +147,10 @@ body {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    min-height: 2.8rem;
+    /* Añade una altura fija para que no se mueva */
+    height: 2.8rem; 
+    /* Asegura que el contenedor del título ocupe siempre el mismo espacio */
+    line-height: 1.4; /* Ajusta este valor si es necesario */
 }
 
 .card .precio {
